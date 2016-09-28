@@ -20,6 +20,12 @@ $large-query: "only screen and (min-width: 900px)";
 
 // Mixins
 
+@mixin font-effects($size) {
+  font-weight: bolder;
+  text-transform: capitalize;
+  font-size: $size;
+}
+
 // Styles
 body{
   background-color: orange;
@@ -32,6 +38,7 @@ body{
   @media #{$large-query} {
     color: $dark-color;
     background-color: $light-color;
+    @include font-effects(16px);
   }
 }
 
@@ -40,6 +47,7 @@ h1, h2, h3, h4{
 }
 
 h1{
+  @include font-effects(24px);
   padding: 20px;
 }
 
