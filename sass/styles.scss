@@ -60,7 +60,7 @@ h2{
   max-width:350px;
   margin:auto;
   @media #{$medium-query} {
-    max-width: 500px;
+    max-width: 550px;
   }
   @media #{$large-query} {
     max-width: 800px;
@@ -73,16 +73,18 @@ h2{
   padding: 20px;
   width: 300px;
   display: inline-block;
+  transition: width 0.5s, background-color 0.5s;
   @media #{$medium-query} {
     margin-left: 10px;
     margin-right: 10px;
-    width: 175px;
+    width: 200px;
     background-color: $bright-color;
   }
   @media #{$large-query} {
     margin-left: 10px;
     margin-right: 10px;
-    width: 150px;
+    width: 25%;
+    min-width: 175px;
     background-color: $bright-color;
   }
 }
