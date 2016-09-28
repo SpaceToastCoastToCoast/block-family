@@ -4,10 +4,19 @@
 // Variables
 $dark-color: #203040;
 $light-color: #d0e8ff;
-$bright-color: #c0ff00;
+$bright-color: #00c0ff;
 $padding: 8px;
 
 // Media Query Ranges
+$small-range: ( 0em, 40em );
+$medium-range: ( 40.063em, 64em );
+$large-range: ( 64.063, 120em );
+
+$medium-query: "only screen and (min-width: 600px) and (max-width: 899px)";
+
+$large-query: "only screen and (min-width: 900px)";
+
+
 
 // Mixins
 
@@ -16,6 +25,14 @@ body{
   background-color: orange;
   text-align: center;
   color: #EEE;
+  @media #{$medium-query} {
+    color: $light-color;
+    background-color: $dark-color;
+  }
+  @media #{$large-query} {
+    color: $dark-color;
+    background-color: $light-color;
+  }
 }
 
 h1, h2, h3, h4{
@@ -40,4 +57,14 @@ h2{
   background-color: #222;
   margin-bottom: 20px;
   padding: 20px;
+  @media #{$medium-query} {
+    background-color: $bright-color;
+  }
+  @media #{$large-query} {
+    background-color: $bright-color;
+  }
+}
+
+@media screen {
+
 }
