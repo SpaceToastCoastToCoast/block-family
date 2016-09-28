@@ -89,6 +89,9 @@ h2{
   }
 }
 
-@media screen {
-
+li:nth-child(odd) {
+  text-shadow: 0 0 8px white, 0 0 4px white;
+  @media #{$medium-query} {
+    text-shadow: 0 0 12px $dark-color;
+  }
 }
