@@ -59,16 +59,30 @@ h2{
 .block_family{
   max-width:350px;
   margin:auto;
+  @media #{$medium-query} {
+    max-width: 500px;
+  }
+  @media #{$large-query} {
+    max-width: 800px;
+  }
 }
 
 .block_family li{
   background-color: #222;
   margin-bottom: 20px;
   padding: 20px;
+  width: 300px;
+  display: inline-block;
   @media #{$medium-query} {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 175px;
     background-color: $bright-color;
   }
   @media #{$large-query} {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 150px;
     background-color: $bright-color;
   }
 }
